@@ -11,10 +11,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Header from "../components/common/Header";
-import moon from "../images/svg/moon.svg";
-import mars from "../images/svg/mars.svg";
-import titan from "../images/svg/titan.svg";
-import europa from "../images/svg/europa.svg";
+import moon from "../image/moon1.png";
+import mars from "../image/mars1.png";
+import titan from "../image/titan1.png";
+import europa from "../image/europa1.png";
 import destination_bg from "../image/destination_bg.jpg";
 import destination_mobile from "../image/destination_bgM.jpg";
 
@@ -52,13 +52,6 @@ const destinationDetails = [
 const Destination = () => {
   const [tabIndex, setTabIndex] = React.useState(0);
   const setImage = destinationDetails[tabIndex].image;
-  // const [isActive, setIsActive] = useState(false);
-  // // const navigate = useNavigate()
-  // React.useEffect(() => {
-  //   if (window.location.pathname.includes(`/destination`)) {
-  //     setIsActive((prev) => (prev ? !prev : prev));
-  //   }
-  // }, []);
   const isActive = "destination";
   return (
     <Flex
