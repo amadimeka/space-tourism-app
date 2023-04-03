@@ -11,10 +11,10 @@ import {
 import Header from "../components/common/Header";
 import crew_bg from "../image/crew3_bg.jpg";
 import crew_bgM from "../image/crew_bgM.jpg";
-import douglas_img from "../images/svg/douglas_img.svg";
-import mark_img from "../images/svg/mark_img.svg";
-import ansari_img from "../images/svg/ansari_img.svg";
-import victor_img from "../images/svg/victor_img.svg";
+import douglas_img from "../image/douglas1.png";
+import mark_img from "../image/mark1.png";
+import ansari_img from "../image/ansari1.png";
+import victor_img from "../image/victor1.png";
 import React from "react";
 
 const crewDetails = [
