@@ -26,7 +26,8 @@ const Home = () => {
           justifyContent={{ md: "center", lg: "space-between" }}
           alignItems={{ md: "center", lg: "normal" }}
           mt={{ md: "106px", lg: "250px" }}
-          px={{ md: "0", lg: "165px" }}
+          pl={{ md: "0", lg: "165px" }}
+          pr={{ md: "0", lg: "11px" }}
         >
           <Flex flexDir="column" w="500px" h="382px">
             <Text

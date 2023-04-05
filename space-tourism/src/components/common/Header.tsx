@@ -30,13 +30,15 @@ const Header: React.FC<Prop> = ({ isActive }) => {
       </Flex>
       <Flex
         w={{ md: "450px", lg: "830px" }}
-        style={{ backgroundColor: `rgba(255, 255, 255, 0.1)` }}
+        style={{ backgroundColor: `rgba(255, 255, 255, 0.04)` }}
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent={{ md: "space-around", lg: "space-between" }}
         color="#fff"
         fontSize={{ md: "14px", lg: "16px" }}
         fontFamily="
           Barlow Condensed"
+        pr={{ base: "0", lg: "165px" }}
+        pl={{ base: "0", lg: "123px" }}
       >
         <Flex
           alignItems="center"

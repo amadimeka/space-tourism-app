@@ -70,7 +70,7 @@ const Tech = () => {
       backgroundRepeat="no-repeat"
       backgroundSize="100%"
       flexDir="column"
-      h="100%"
+      h={'full'}
     >
       <Header isActive={isActive} />
       <Text
