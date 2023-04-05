@@ -22,29 +22,29 @@ const destinationDetails = [
   {
     planet: "moon",
     body: "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-    distance: "384,400 km",
-    time_travel: "3days",
+    distance: "384,400 KM",
+    time_travel: "3 DAYS",
     image: moon,
   },
   {
     planet: "mars",
     body: "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
-    distance: "225 MIL. km",
-    time_travel: "9 month",
+    distance: "225 MIL. KM",
+    time_travel: "9 MONTHS",
     image: mars,
   },
   {
     planet: "europa",
     body: "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
-    distance: "628 MIL. km",
-    time_travel: "3 years",
+    distance: "628 MIL. KM",
+    time_travel: "3 YEARS",
     image: europa,
   },
   {
     planet: "titan",
     body: "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-    distance: "1.6 BIL. km",
-    time_travel: "7 years",
+    distance: "1.6 BIL. KM",
+    time_travel: "7 YEARS",
     image: titan,
   },
 ];
@@ -57,18 +57,19 @@ const Destination = () => {
     <Flex
       color="#fff"
       flexDir="column"
-      h="100%"
+      h={"full"}
       backgroundImage={{
         lg: `url(${destination_bg})`,
         md: `url(${destination_mobile})`,
       }}
       backgroundRepeat="no-repeat"
       backgroundSize="100%"
+      pb={{ mb: "62px", lg: "118px" }}
     >
       <Header isActive={isActive} />
       <Text
         mt="76px"
-        ml="160px"
+        ml={{ md: "75px", lg: "160px" }}
         fontFamily="Barlow Condensed"
         fontSize="28px"
         lineHeight="34px"
@@ -81,10 +82,10 @@ const Destination = () => {
         flexDirection={{ md: "column", lg: "row" }}
         alignItems="center"
         justifyContent={{ md: "center", lg: "space-around" }}
-        mt={{ md: "10px", lg: "64px" }}
+        mt={{ md: "60px", lg: "64px" }}
       >
         <Flex w={{ md: "300px", lg: "445px" }} h={{ md: "300px", lg: "472px" }}>
-          <Image src={setImage} alt="logo" boxSize="md" />
+          <Image src={setImage} alt="logo" boxSize={{ md: "xs", lg: "md" }} />
         </Flex>
         <Flex
           w={{ md: "573px", lg: "444px" }}
@@ -139,14 +140,15 @@ const Destination = () => {
                     >
                       {destination.planet.toUpperCase()}
                     </Text>
-                    <Text
+                    <Box
+                      w="444px"
                       fontSize="18px"
                       lineHeight="32px"
                       color="#D0D6F9"
                       fontFamily="Barlow"
                     >
                       {destination.body}
-                    </Text>
+                    </Box>
                     <Box
                       w={{ md: "573px", lg: "444px" }}
                       h="1px"
@@ -160,20 +162,46 @@ const Destination = () => {
                     >
                       <Flex
                         flexDir="column"
-                        mr="20px"
+                        mr="65px"
                         justifyContent={{ md: "center", lg: "normal" }}
                         alignItems={{ md: "center", lg: "normal" }}
                       >
-                        <Text color="#D0D6F9">AVG DISTANCE</Text>
-                        <Text mt="12px">{destination.distance}</Text>
+                        <Text
+                          color="#D0D6F9"
+                          fontSize="14px"
+                          fontFamily="Barlow Condensed"
+                        >
+                          AVG DISTANCE
+                        </Text>
+                        <Text
+                          mt="12px"
+                          fontSize="28px"
+                          fontFamily="Bellefair"
+                          fontWeight="400"
+                        >
+                          {destination.distance}
+                        </Text>
                       </Flex>
                       <Flex
                         flexDir="column"
                         justifyContent={{ md: "center", lg: "normal" }}
                         alignItems={{ md: "center", lg: "normal" }}
                       >
-                        <Text color="#D0D6F9">EST. TRAVEL TIME</Text>
-                        <Text mt="12px">{destination.time_travel}</Text>
+                        <Text
+                          color="#D0D6F9"
+                          fontSize="14px"
+                          fontFamily="Barlow Condensed"
+                        >
+                          EST. TRAVEL TIME
+                        </Text>
+                        <Text
+                          mt="12px"
+                          fontSize="28px"
+                          fontFamily="Bellefair"
+                          fontWeight="400"
+                        >
+                          {destination.time_travel}
+                        </Text>
                       </Flex>
                     </Flex>
                   </Flex>

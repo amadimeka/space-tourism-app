@@ -11,10 +11,10 @@ import {
 import Header from "../components/common/Header";
 import crew_bg from "../image/crew3_bg.jpg";
 import crew_bgM from "../image/crew_bgM.jpg";
-import douglas_img from "../image/douglas1.png";
-import mark_img from "../image/mark1.png";
-import ansari_img from "../image/ansari1.png";
-import victor_img from "../image/victor.png";
+import douglas_img from "../images/svg/douglas_img.svg";
+import mark_img from "../images/svg/mark_img.svg";
+import ansari_img from "../images/svg/ansari_img.svg";
+import victor_img from "../images/svg/victor_img.svg";
 import React from "react";
 
 const crewDetails = [
@@ -57,7 +57,7 @@ const Crew = () => {
   return (
     <Flex
       w="100%"
-      h="100%"
+      h={"full"}
       backgroundImage={{
         lg: `url(${crew_bg})`,
         md: `url(${crew_bgM})`,
@@ -112,6 +112,7 @@ const Crew = () => {
                     fontFamily="Barlow"
                     textAlign={{ md: "center", lg: "left" }}
                     fontSize="18px"
+                    lineHeight='32px'
                     color="#D0D6F9"
                   >
                     {detail.body}
@@ -162,7 +163,7 @@ const Crew = () => {
           pr={{ md: "0", lg: "150px" }}
           mt={{ md: "40px", lg: "0px" }}
         >
-          <Image src={crewDetails[tabIndex].img} alt="douglas" boxSize="lg" />
+          <Image src={crewDetails[tabIndex].img} alt="douglas" boxSize={{ md: "xs", lg: "lg" }} />
         </Flex>
       </Flex>
     </Flex>
